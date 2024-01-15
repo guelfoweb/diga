@@ -146,7 +146,11 @@ def DIGA(domain, dns=None, useragent=None, timeout=None, threads=None):
     return diga(domain, dns=None, useragent=None, timeout=None)
 
 def main():
-    parser = argparse.ArgumentParser(prog="DIGA", description="Domain Inspector Global Audit")
+    parser = argparse.ArgumentParser(
+        prog="DIGA", 
+        description=f"diga v.{__version__} - Domain Inspector Global Audit\nhttps://github.com/guelfoweb/diga", 
+        formatter_class=argparse.RawTextHelpFormatter
+        )
 
     # args
     parser.add_argument("-d", "--domain", help="domain to analyze")
